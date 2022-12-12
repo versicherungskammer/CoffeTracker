@@ -51,9 +51,15 @@ const goTo = (link) => {
 const linksList = [
   {
     title: "Coffee Tracker",
-    caption: "Community Quasar projects",
+    caption: "",
     icon: "local_cafe",
     link: "coffee",
+  },
+  {
+    title: "Statistik",
+    caption: "",
+    icon: "local_cafe",
+    link: "statistik",
   },
 ];
 

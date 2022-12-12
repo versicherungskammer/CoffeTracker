@@ -8,6 +8,10 @@ const routes = [
         path: "/coffee",
         component: () => import("pages/CoffeeTracker.vue"),
       },
+      {
+        path: "/statistik",
+        component: () => import("pages/Statistik.vue"),
+      },
     ],
   },
 
