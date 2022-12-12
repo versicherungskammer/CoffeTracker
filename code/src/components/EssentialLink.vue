@@ -5,6 +5,8 @@
     target="_blank"
     :href="link"
   >
+
+  
     <q-item-section
       v-if="icon"
       avatar
