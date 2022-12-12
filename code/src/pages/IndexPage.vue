@@ -3,7 +3,7 @@
     <img
       alt="vkb logo"
       src="~/assets/vkb_logo.png"
-      style="width: 400px; height: 200px"
+      style="width: 536px; height: 180px"
     >
   </q-page>
 </template>
