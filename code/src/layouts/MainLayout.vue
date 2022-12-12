@@ -12,7 +12,8 @@
         />
 
         <q-toolbar-title>
-                <div>CoffeeTracker v{{ $q.version }}</div>
+          <div>CoffeeTracker v{{ $q.version }}</div>
+        </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
