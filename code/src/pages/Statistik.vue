@@ -101,7 +101,8 @@ const rows = [
 ]
 
 const updateNumbers = (inputId) => {
-  meineKlasse.countUp()
+  objIndex = rows.findIndex((obj => obj.id == inputId ))
+  rows[objIndex].amount += 1;
 }
 
 export default {
@@ -110,8 +111,8 @@ export default {
       columns,
       rows: ref(rows)
     }
-  }
-
+  },
+  updateNumbers
 
 
 }
