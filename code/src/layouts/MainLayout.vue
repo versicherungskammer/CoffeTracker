@@ -1,8 +1,8 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
-        <q-btn
+      <q-toolbar class="bg-brown-9">
+        <q-btn class="menuButton"
           flat
           dense
           round
@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
+        <q-toolbar-title class="title">
           <div>CoffeeTracker v{{ $q.version }}</div>
         </q-toolbar-title>
       </q-toolbar>
