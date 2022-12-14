@@ -1,10 +1,5 @@
-import statistics from 'src/pages/statistics'
+import {updateNumbers} from 'src/pages/Statistik.vue'
 
-const incrementStatistic = (inputId) => {
-    statistics.updateNumbers(inputId)    
-}
-
-
-export default{
-    incrementStatistic
+export const incrementStatistic = (inputId) => {
+    updateNumbers(inputId)    
 }

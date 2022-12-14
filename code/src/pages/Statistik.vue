@@ -99,8 +99,8 @@ const rows = [
   }
 ]
 
-const updateNumbers = (inputId) => {
-  objIndex = rows.findIndex((obj => obj.id == inputId ))
+export const updateNumbers = (inputId) => {
+  let objIndex = rows.findIndex((obj => obj.id == inputId ))
   rows[objIndex].amount += 1;
 }
 
@@ -112,7 +112,5 @@ export default {
     }
   },
   updateNumbers
-
-
 }
 </script>
