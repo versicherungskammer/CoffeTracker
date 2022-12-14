@@ -4,8 +4,8 @@
     </div>
     
     <q-list bordered separator>
-      <q-item clickable v-ripple v-for="value of values">
-        <q-item-section>value.</q-item-section>
+      <q-item clickable v-ripple v-for="value in percentageValues">
+        Anteil von: {{value.name}} {{value.percentage}}
       </q-item>
     </q-list>
     <div class = "statisticsContainer">
@@ -25,27 +25,27 @@
               <q-input v-model="scope.value" dense autofocus counter />
             </q-popup-edit>
           </q-td>
-          <q-td key="fillingAmount" :props="props">
+          <!-- <q-td key="fillingAmount" :props="props">
             {{ props.row.fillingAmount }}
             <q-popup-edit v-model="props.row.fillingAmount" title="Passe Füllmenge an" buttons label-set="Speichern" label-cancel="Schließen" v-slot="scope">
               <q-input type="number" v-model="scope.value" dense autofocus />
             </q-popup-edit>
-          </q-td>
-          <q-td key="price" :props="props">
+          </q-td> -->
+          <!-- <q-td key="price" :props="props">
             {{ props.row.price }} €
             <q-popup-edit v-model="props.row.price" title="Passe Preis an" buttons label-set="Speichern" label-cancel="Schließen" v-slot="scope">
               <q-input type="number" v-model="scope.value" dense autofocus />
             </q-popup-edit>
-          </q-td>
-          <q-td key="additives" :props="props">
+          </q-td> -->
+          
+          <!-- <q-td key="additives" :props="props">
             <div class="text-pre-wrap">{{ props.row.additives }}</div>
             <q-popup-edit v-model="props.row.additives" title="Passe Zusätze an" buttons label-set="Speichern" label-cancel="Schließen" v-slot="scope">
               <q-input type="textarea" v-model="scope.value" dense autofocus />
             </q-popup-edit>
-          </q-td>
+          </q-td> -->
           <q-td key="amount" :props="props">
             {{ props.row.amount }}
-           
           </q-td>
           </q-tr>
       </template>
@@ -61,7 +61,6 @@ import { ref } from 'vue'
 import { calculateFullAmount } from 'src/services/calculateCoffeeAmount'
 import { percentageOf } from 'src/services/convertLiters'
 
-let values = percentageOf();
 
 const columns = [
   { 
@@ -73,15 +72,16 @@ const columns = [
     format: val => `${val}`,
     sortable: true
   },
-  { name: 'fillingAmount', align: 'center', label: 'Menge (ml)', field: 'fillingAmount', sortable: true },
-  { name: 'price', label: 'Preis (€)', field: 'fat', sortable: true, style: 'width: 10px' },
-  { name: 'additives', label: 'Zucker/Milch', field: 'additives' },
+  //{ name: 'fillingAmount', align: 'center', label: 'Menge (ml)', field: 'fillingAmount', sortable: true },
+  //{ name: 'price', label: 'Preis (€)', field: 'fat', sortable: true, style: 'width: 10px' },
+  //{ name: 'additives', label: 'Zucker/Milch', field: 'additives' },
   { name: 'amount', label: 'Stück', field: 'amount' }
 ]
 
+let percentageValues = []
 
 const rows = [
-{
+  {
     id : '0',
     name: 'Espresso',
     fillingAmount: 30,
@@ -122,10 +122,12 @@ export default {
     calculateFullAmount();
     return {
       columns,
-      rows: ref(rows)
+      rows: ref(rows),
+      percentageValues : percentageOf()
     }
   },
   updateNumbers,
   getRows  
+  
 }
 </script>

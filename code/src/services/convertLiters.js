@@ -34,7 +34,7 @@ export function percentageOf() {
         percentageForCalculation = amount / arrayItem['volume'];
         console.log(percentageForCalculation*100 + "%");
         percentageArray.push({
-            name: arrayItem['name'].toString, 
+            name: arrayItem['name'].toString(), 
             percentage: percentageForCalculation*100
         })
         
