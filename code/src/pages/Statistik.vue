@@ -52,8 +52,7 @@
 <style></style>
 
 <script>
-  import { ref } from 'vue'
-  import meineKlasse from 'src/services/updateStatistics'
+import { ref } from 'vue'
 
 const columns = [
   { 
