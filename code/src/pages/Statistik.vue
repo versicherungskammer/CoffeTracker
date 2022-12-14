@@ -53,6 +53,8 @@
 
 <script>
 import { ref } from 'vue'
+import { calculateFullAmount } from 'src/services/calculateCoffeeAmount'
+
 
 const columns = [
   { 
@@ -99,6 +101,10 @@ const rows = [
   }
 ]
 
+export function getRows() {
+  return rows;
+}
+
 export const updateNumbers = (inputId) => {
   let objIndex = rows.findIndex((obj => obj.id == inputId ))
   rows[objIndex].amount += 1;
@@ -106,11 +112,13 @@ export const updateNumbers = (inputId) => {
 
 export default {
   setup () {
+    calculateFullAmount();
     return {
       columns,
       rows: ref(rows)
     }
   },
-  updateNumbers
+  updateNumbers,
+  getRows
 }
 </script>

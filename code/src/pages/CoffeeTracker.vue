@@ -8,7 +8,7 @@
           alt="Coffee Small Logo"
           src="~assets/CoffeeSmall-neu.png"
           style="width: 60px; height: 120px"
-          @click="coffeeSelected(0)"
+          @click="percentageOf()"
         />
       </div>
       <div class="container">
@@ -33,8 +33,11 @@
 <style></style>
 <script setup>
 import {incrementStatistic} from "src/services/updateStatistics.js";
+import {percentageOf} from  'src/services/convertLiters'
 
 const coffeeSelected = (input) => {
   incrementStatistic(input);
 }
+
+
 </script>
