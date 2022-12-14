@@ -1,40 +1,46 @@
 import { calculateFullAmount } from "./calculateCoffeeAmount";
 
 //in ml
-const bucket = 10000;
-const bathtub = 150000;
-const swimmingPool = 5000000;
-const ammersee = 1750000000000000000;
+// const bucket = 10000;
+// const bathtub = 150000;
+// const swimmingPool = 5000000;
+// const ammersee = 1750000000000000000;
 
 const values = [
    {
-    name: bucket,
+    name: 'bucket',
     volume: 10000
    },
    {
-    name: bathtub,
+    name: 'bathtub',
     volume: 150000
    },
    {
-    name: swimmingPool,
+    name: 'swimmingPool',
     volume: 5000000
    },
    {
-    name: ammersee,
+    name: 'ammersee',
     volume: 1750000000000000000
    },   
 ];
 
-let percentage = 0;
+let percentageForCalculation = 0;
 
 export function percentageOf() {
     const amount = calculateFullAmount();
+    let percentageArray = []
     values.forEach(function (arrayItem) {
-        percentage = amount / arrayItem['volume'];
-        console.log(percentage*100 + "%");
-
+        percentageForCalculation = amount / arrayItem['volume'];
+        console.log(percentageForCalculation*100 + "%");
+        percentageArray.push({
+            name: arrayItem['name'].toString, 
+            percentage: percentageForCalculation*100
+        })
+        
         //if percentage is over 100, add one more and write "more than ... buckets"
     });
+    return percentageArray
 }
 
 

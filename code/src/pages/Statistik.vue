@@ -3,6 +3,11 @@
       <h1>Statistik</h1>
     </div>
     
+    <q-list bordered separator>
+      <q-item clickable v-ripple v-for="value of values">
+        <q-item-section>value.</q-item-section>
+      </q-item>
+    </q-list>
     <div class = "statisticsContainer">
       <div class="q-pa-md">
     <q-table
@@ -54,7 +59,9 @@
 <script>
 import { ref } from 'vue'
 import { calculateFullAmount } from 'src/services/calculateCoffeeAmount'
+import { percentageOf } from 'src/services/convertLiters'
 
+let values = percentageOf();
 
 const columns = [
   { 
@@ -119,6 +126,6 @@ export default {
     }
   },
   updateNumbers,
-  getRows
+  getRows  
 }
 </script>
