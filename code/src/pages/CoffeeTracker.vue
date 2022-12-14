@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <!-- <div>
     <h1>Coffee Tracker</h1>
-  </div>
+  </div> -->
   <q-page class="flex flex-center">
       <div class="container">
         <img

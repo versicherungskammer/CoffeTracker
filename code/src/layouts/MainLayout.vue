@@ -1,4 +1,5 @@
 <template>
+  <div class="background">
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar class="bg-brown-9">
@@ -12,7 +13,7 @@
         />
 
         <q-toolbar-title class="title">
-          <div>CoffeeTracker v{{ $q.version }}</div>
+          <div>CoffeeTracker</div>
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -38,6 +39,7 @@
       <router-view />
     </q-page-container>
   </q-layout>
+</div>
 </template>
 
 <script setup>
@@ -64,4 +66,9 @@ const linksList = [
 ];
 
 const leftDrawerOpen = ref(false);
+
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
+}
+
 </script>
