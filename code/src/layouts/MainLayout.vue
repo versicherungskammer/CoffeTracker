@@ -21,7 +21,7 @@
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
         <q-item-label header> Items </q-item-label>
-        <div v-for="link in linksList" :key="link.title" v-bind="link">
+        <div v-for="link in menuList" :key="link.title" v-bind="link">
           <q-item clickable @click="goTo(link.link), toggleLeftDrawer()">
             <q-item-section v-if="link.icon" avatar>
               <q-icon :name="link.icon" />
@@ -34,7 +34,6 @@
         </div>
       </q-list>
     </q-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -43,14 +42,15 @@
 </template>
 
 <script setup>
+import { useQuasar } from 'quasar'
 import { defineComponent, ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 const goTo = (link) => {
   router.push({ path: link });
 };
-
-const linksList = [
+const $q = useQuasar();
+const menuList = [
   {
     title: "Coffee Tracker",
     caption: "",
@@ -64,6 +64,21 @@ const linksList = [
     link: "statistik",
   },
 ];
+  if($q.platform.is.mobile){
+      console.log('mobile')
+      menuList.push(
+      {
+      title: "install on your Homescreen",
+        caption: "insallation on Your device",
+        icon: "test",
+        link: "/installation",
+      }
+      )
+       if($q.platform.within.__installed){
+        console.log('App is installed')
+       }
+     }
+
 
 const leftDrawerOpen = ref(false);
 

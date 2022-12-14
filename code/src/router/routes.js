@@ -12,6 +12,7 @@ const routes = [
         path: "/statistik",
         component: () => import("pages/Statistik.vue"),
       },
+      { path: "/installation", component: () => import("src/pages/AppInstallation.vue") },
     ],
   },
 
