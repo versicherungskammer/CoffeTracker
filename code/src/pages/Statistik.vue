@@ -54,17 +54,69 @@
     </div>
 
     <div>
+      <div class="imgContainer" id="1"></div>
+      <div class="imgContainer" id="2"></div>
+      <div class="imgContainer" id="3"></div>
+      <div class="imgContainer" id="4"></div>
+    </div>
+
+    <div>
         <img
           alt="Coffee Medium Logo"
-          src="~assets/CoffeeMedium-neu.png"
+          src="~assets/Geld.svg"
           style="width: 40px; height: 80px"
         />
-        
+
+
       
   </div>
 </template>
   
-<style></style>
+<style>
+.imgContainer {
+    width:100%; 
+    height:100%;
+}
+#1{ 
+    border:1px solid #000;         
+    padding-bottom: 30%; 
+    height: 0;
+    width:30%; 
+    margin:1%; 
+    float:left; 
+    display:block;
+}
+
+#2{ 
+    border:1px solid #000;         
+    padding-bottom: 30%; 
+    height: 0;
+    width:30%; 
+    margin:1%; 
+    float:left; 
+    display:block;
+}
+
+#3{ 
+    border:1px solid #000;         
+    padding-bottom: 30%; 
+    height: 0;
+    width:30%; 
+    margin:1%; 
+    float:left; 
+    display:block;
+}
+
+#4{ 
+    border:1px solid #000;         
+    padding-bottom: 30%; 
+    height: 0;
+    width:30%; 
+    margin:1%; 
+    float:left; 
+    display:block;
+}
+</style>
 
 <script>
 import { ref } from 'vue'
