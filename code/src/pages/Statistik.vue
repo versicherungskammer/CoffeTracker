@@ -55,16 +55,16 @@
 
   <div class="wrapper">
     <div class="imgContainer one">
-      <img src="src\assets\Messbecher.svg" />
+      <img src="src\assets\eimer.svg" />
     </div>
     <div class="imgContainer two">
-      <img src="src\assets\Messbecher.svg" />
+      <img src="src\assets\badewanne.svg" />
     </div>
     <div class="imgContainer three">
-      <img src="src\assets\Messbecher.svg" />
+      <img src="src\assets\schwimmbad.svg" />
     </div>
     <div class="imgContainer four">
-      <img src="src\assets\Messbecher.svg" />
+      <img src="src\assets\ammersee.svg" />
     </div>
   </div>
 </template>
