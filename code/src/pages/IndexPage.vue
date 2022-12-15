@@ -3,7 +3,7 @@
     <img
       alt="CoffeTracker Logo"
       src="~assets/CoffeeTrackerLogo1.svg"
-      style="height: 300px;"
+      style="width:300px; margin-left: -40px"
     />
   </q-page>
 </template>
