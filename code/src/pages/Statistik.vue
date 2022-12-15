@@ -52,10 +52,10 @@
 
   <div class="wrapper" v-for="value in percentageValues">
     <div>
-    <q-img :src="value.image" alt="alternativer Text"  class="summaryImage"/>
-    <br/>
-    {{value.percentage}}
-  </div>
+      <q-img :src="value.image" alt="alternativer Text"  class="summaryImage"/>
+      <br/>
+      {{value.percentage}}
+    </div>
   </div>
 </template>
 
