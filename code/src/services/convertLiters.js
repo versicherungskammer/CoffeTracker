@@ -33,10 +33,13 @@ export function percentageOf() {
     values.forEach(function (arrayItem) {
         percentageForCalculation = amount / arrayItem['volume'];
         console.log(percentageForCalculation*100 + "%");
+        let imageLink = getCorrespondingImage(arrayItem['name'].toString());
         percentageArray.push({
             name: arrayItem['name'].toString(), 
-            percentage: percentageForCalculation * 100
+            percentage: percentageForCalculation * 100,
+            image: imageLink
         })
+        console.log(percentageArray)
         
         //if percentage is over 100, add one more and write "more than ... buckets"
     });
@@ -54,6 +57,23 @@ export function getEachPercentageOf(name) {
         //if percentage is over 100, add one more and write "more than ... buckets"
     });
     return percentageForCalculation
+}
+
+function getCorrespondingImage(input) {
+    let preLink = 'src/assets/'
+    console.log(input)
+    if(input === 'bucket') {
+        console.log( preLink + 'eimer.svg')
+        return preLink + 'eimer.svg' 
+    } else if (input === 'bathtub') {
+        return preLink + 'badewanne.svg'
+    } else if (input === 'swimmingPool') {
+        return preLink + 'schwimmbad.svg'
+    } else if (input === 'ammersee') {
+        return preLink + 'ammersee.svg'
+    }
+
+
 }
 
 

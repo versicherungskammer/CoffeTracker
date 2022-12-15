@@ -3,11 +3,7 @@
     <h1>Statistik</h1>
   </div>
 
-  <q-list bordered separator>
-    <q-item clickable v-ripple v-for="value in percentageValues">
-      Anteil von: {{ value.name }} {{ value.percentage }}
-    </q-item>
-  </q-list>
+
   <div class="statisticsContainer">
     <div class="q-pa-md">
       <q-table
@@ -53,24 +49,18 @@
     </div>
   </div>
 
-  <div class="wrapper">
-    <div class="imgContainer one">
-      <img src="src\assets\eimer.svg" />
-    </div>
-    <div class="imgContainer two">
-      <img src="src\assets\badewanne.svg" />
-    </div>
-    <div class="imgContainer three">
-      <img src="src\assets\schwimmbad.svg" />
-    </div>
-    <div class="imgContainer four">
-      <img src="src\assets\ammersee.svg" />
-    </div>
+
+  <div class="wrapper" v-for="value in percentageValues">
+    <div>
+    <q-img :src="value.image" alt="alternativer Text"  class="summaryImage"/>
+    <br/>
+    {{value.percentage}}
+  </div>
   </div>
 </template>
 
 <style>
-img {
+.summaryImage {
   width: 150px;
 }
 
