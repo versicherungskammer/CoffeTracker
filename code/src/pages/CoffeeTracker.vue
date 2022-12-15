@@ -22,7 +22,7 @@
       <div class="container">
         <img
           alt="Coffee Large Logo"
-          src="~assets/CoffeeLarge.svg"
+          src="~assets/CoffeeLarge-neu.png"
           style="width: 100px; height: 200px"
           @click="coffeeSelected(2)"
         />
