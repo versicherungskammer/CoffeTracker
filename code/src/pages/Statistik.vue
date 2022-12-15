@@ -52,6 +52,16 @@
     </q-table>
   </div>
     </div>
+
+    <div>
+        <img
+          alt="Coffee Medium Logo"
+          src="~assets/CoffeeMedium-neu.png"
+          style="width: 40px; height: 80px"
+        />
+        
+      
+  </div>
 </template>
   
 <style></style>
@@ -60,6 +70,7 @@
 import { ref } from 'vue'
 import { calculateFullAmount } from 'src/services/calculateCoffeeAmount'
 import { percentageOf } from 'src/services/convertLiters'
+import { getEachPercentageOf} from 'src/services/convertLiters'
 
 
 const columns = [
@@ -107,6 +118,11 @@ const rows = [
     amount: 12 
   }
 ]
+
+
+
+
+  
 
 export function getRows() {
   return rows;
