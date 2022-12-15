@@ -35,7 +35,7 @@ export function percentageOf() {
         console.log(percentageForCalculation*100 + "%");
         percentageArray.push({
             name: arrayItem['name'].toString(), 
-            percentage: percentage
+            percentage: percentageForCalculation * 100
         })
         
         //if percentage is over 100, add one more and write "more than ... buckets"

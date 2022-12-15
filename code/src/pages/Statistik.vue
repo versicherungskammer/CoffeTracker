@@ -53,68 +53,32 @@
   </div>
     </div>
 
-    <div>
-      <div class="imgContainer" id="1"></div>
-      <div class="imgContainer" id="2"></div>
-      <div class="imgContainer" id="3"></div>
-      <div class="imgContainer" id="4"></div>
-    </div>
-
-    <div>
-        <img
-          alt="Coffee Medium Logo"
-          src="~assets/Geld.svg"
-          style="width: 40px; height: 80px"
-        />
-
-
-      
+  <div class="wrapper">
+      <div class="imgContainer one">
+        <img src="src\assets\Messbecher.svg"/>
+      </div>
+      <div class="imgContainer two">
+        <img src="src\assets\Messbecher.svg"/>
+      </div>
+      <div class="imgContainer three">
+        <img src="src\assets\Messbecher.svg"/>
+      </div>
+      <div class="imgContainer four">
+        <img src="src\assets\Messbecher.svg"/>
+      </div>
   </div>
 </template>
   
 <style>
-.imgContainer {
-    width:100%; 
-    height:100%;
-}
-#1{ 
-    border:1px solid #000;         
-    padding-bottom: 30%; 
-    height: 0;
-    width:30%; 
-    margin:1%; 
-    float:left; 
-    display:block;
+img{
+  width: 150px;
+
 }
 
-#2{ 
-    border:1px solid #000;         
-    padding-bottom: 30%; 
-    height: 0;
-    width:30%; 
-    margin:1%; 
-    float:left; 
-    display:block;
-}
-
-#3{ 
-    border:1px solid #000;         
-    padding-bottom: 30%; 
-    height: 0;
-    width:30%; 
-    margin:1%; 
-    float:left; 
-    display:block;
-}
-
-#4{ 
-    border:1px solid #000;         
-    padding-bottom: 30%; 
-    height: 0;
-    width:30%; 
-    margin:1%; 
-    float:left; 
-    display:block;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
 }
 </style>
 
@@ -122,7 +86,7 @@
 import { ref } from 'vue'
 import { calculateFullAmount } from 'src/services/calculateCoffeeAmount'
 import { percentageOf } from 'src/services/convertLiters'
-import { getEachPercentageOf} from 'src/services/convertLiters'
+// import { getEachPercentageOf} from 'src/services/convertLiters'
 
 
 const columns = [
