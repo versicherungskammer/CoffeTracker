@@ -60,7 +60,7 @@ const menuList = [
   {
     title: "Statistik",
     caption: "",
-    icon: "local_cafe",
+    icon: "bar_chart",
     link: "statistik",
   },
 ];
